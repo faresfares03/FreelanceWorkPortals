@@ -1,6 +1,13 @@
 /* ==========================================================================
    1. الإعدادات العامة والمتغيرات والتصفير (Light Premium Theme)
    ========================================================================== */
+  @font-face {
+    font-family: 'Sakkal Majalla';
+    src: url('fonts/sakkal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --main-color: #2575fc;
     --secondary-color: #6a11cb;
@@ -22,30 +29,28 @@
     font-family: 'Sakkal Majalla''Sakkal Majalla';
 }
 /* إعداد خط Cairo كخط رئيسي للموقع */
-body, h1, h2, h3, h4, h5, h6, .navbar-brand {
-  font-family: "Cairo", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  
-  /* الإعدادات المتقدمة للخط المتغير */
-  font-variation-settings: "slnt" 0; 
-}
-
-/* يمكنك الآن التحكم بالوزن (السمك) في أي مكان بسهولة */
-h1, h2, .navbar-brand {
-  font-weight: 700; /* عريض للعناوين */
-}
-
-p, .nav-link {
-  font-weight: 400; /* عادي للنصوص والقوائم */
-  font-family: "Cairo", sans-serif;
-}
 body {
-    font-family: 'Sakkal Majalla', sans-serif;
-    background-color: #f4f7fe; /* خلفية فاتحة ناعمة مائلة للأزرق الخفيف لإبراز طبقات الزجاج */
+    font-family: 'Sakkal Majalla', 'Cairo', sans-serif;
+    background-color: #f4f7fe;
     color: var(--dark-color);
     overflow-x: hidden;
     scroll-behavior: smooth;
+}
+
+/* العناوين والنافبار تعتمد خط Cairo المتغير والأنيق */
+h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link {
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+/* النصوص الطويلة، البطاقات، والمحادثات تعتمد فخامة خط Sakkal Majalla */
+p.lead, .card-text, .answer-btn, .form-label, .platform-card p, .msg-text {
+    font-family: 'Sakkal Majalla', serif;
+    font-size: 1.55rem; /* خط صقال مجلة يحتاج تكبير الحجم قليلاً ليظهر بكامل وضوحه العالي ومثاليته للعين */
+    line-height: 1.5;
+    color: #334155;
 }
 
 /* تعديل حجم الخطوط المخصصة للنصوص الطويلة (خط زين) */
