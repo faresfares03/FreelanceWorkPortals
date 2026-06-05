@@ -19,9 +19,26 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none !important;
-    font-family: 'Sakkal Majalla';
+    font-family: 'Sakkal Majalla''Sakkal Majalla';
+}
+/* إعداد خط Cairo كخط رئيسي للموقع */
+body, h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  
+  /* الإعدادات المتقدمة للخط المتغير */
+  font-variation-settings: "slnt" 0; 
 }
 
+/* يمكنك الآن التحكم بالوزن (السمك) في أي مكان بسهولة */
+h1, h2, .navbar-brand {
+  font-weight: 700; /* عريض للعناوين */
+}
+
+p, .nav-link {
+  font-weight: 400; /* عادي للنصوص والقوائم */
+}
 body {
     font-family: 'Sakkal Majalla', sans-serif;
     background-color: #f4f7fe; /* خلفية فاتحة ناعمة مائلة للأزرق الخفيف لإبراز طبقات الزجاج */
